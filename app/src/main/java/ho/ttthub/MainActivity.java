@@ -22,7 +22,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * github from android studio 02
+     * github from android studio
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
      * {@link FragmentPagerAdapter} derivative, which will keep every
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //メニューの表示
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -145,19 +145,21 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            //タブ数
+            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "ホーム";
                 case 1:
-                    return "SECTION 2";
+                    return "今週";
                 case 2:
-                    return "SECTION 3";
+                    return "今月";
+                case 3:
+                    return "来月";
             }
             return null;
         }
